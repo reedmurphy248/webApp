@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Reed Murphy's Personal Site</title>
+<link th:replace="fragments/head">
 </head>
 <body>
+	<div th:replace="fragments/navbar"></div>
 	<h1>Hello Everyone, I'm Reed Murphy, Welcome to my Personal Site!</h1>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<h1 class="display-4">Explore My Page</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col col-lg-6">
+						<a th:href="@{/aboutme}"><h4>About Me</h4></a>
+					</div>
+					<div class="col col-lg-6">
+						<a href="https://github.com/reedmurphy248"><h4>My GitHub</h4></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col col-lg-6">
+						<a th:href="@{/weather}"><h4>API Work- Check the Weather!</h4></a>
+					</div>
+					<div class="col col-lg-6">
+						<a th:href="@{/askme}"><h4>Ask Me Anything!</h4></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script th:replace="fragments/scripts"></script>
 </body>
 </html>

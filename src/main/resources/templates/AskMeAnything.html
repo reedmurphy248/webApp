@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Ask Me Anything</title>
+<link th:replace="fragments/head">
+</head>
+<body>
+
+	<div class="container bg-light justify-content-center">
+		<div class="row">
+			<div class="col col-md-6 offset-md-3">
+				<h1>Ask Me Anything!</h1>
+
+				<h2>New Post!</h2>
+				<form class="form-group" th:action="@{/askme}" method="post">
+					<table class="table">
+						<tr>
+							<td>Title</td>
+							<td><input class="form-control" type="text" autofocus
+								placeholder="Write Your Message Here" th:field="*{askPost.message}" /></td>
+						</tr>
+					</table>
+					<button class="btn btn-md btn-primary btn-block" type="Submit">Post!</button>
+				</form>
+
+				
+
+			</div>
+		</div>
+		<a th:href="@{/}"><button type="button"
+				class="btn btn-lg btn-primary">Home</button></a>
+		<div th:each="post : ${posts}" class="row">
+			<div class="col col-md-6 offset-md-3">
+				<div th:text="${post.message}"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script th:replace="fragments/scripts"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:replace="fragments/head">
+</head>
+<body>
+	<div th:replace="fragments/navbar"></div>
+
+	<div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">About Me</h1>
+          <p class="lead">I am a 23 year old software engineering student with experience in Java, Python, and Javascript. My skills in Java mostly revolves around the SpringBoot framework and web development however I can also implement databases and API's.</p>
+          <p>In my personal life, I enjoy all things to do with nature and being active, but I love hiking and scuba diving. I've been SCUBA certified since highschool and have been diving in 5 continents. My favorite place to go SCUBA Diving is Raja Ampat in West Papua.</p>
+          <p>My three favorite places to travel are Japan, South Africa, and Indonesia and sushi is my favorite food.</p>
+          <a th:href="@{/}"><button type="button" class="btn btn-lg btn-primary">Home</button></a>
+        </div>
+      </div>
+
+	<script th:replace="fragments/scripts"></script>
+</body>
+</html>
